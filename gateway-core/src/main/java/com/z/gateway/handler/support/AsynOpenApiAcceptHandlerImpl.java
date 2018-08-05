@@ -82,6 +82,8 @@ public class AsynOpenApiAcceptHandlerImpl implements OpenApiAcceptHandler, Appli
 
 			}
 		});
+
+		logger.info("end................................");
 	}
 
 	private ApplicationContext applicationContext;

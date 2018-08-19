@@ -79,7 +79,7 @@ public class OpenApiReqAdapter extends AbstractOpenApiHandler {
 		 * OauthErrorEnum.APP_TOKEN.getErrMsg(), requestBean); return; }
 		 */
 		if (StringUtils.isBlank(requestBean.getApiId())) {
-			setError(OauthErrorEnum.API_ID.getErrCode(), OauthErrorEnum.API_ID.getErrMsg(), requestBean);
+ 			setError(OauthErrorEnum.API_ID.getErrCode(), OauthErrorEnum.API_ID.getErrMsg(), requestBean);
 			return;
 		}
 
@@ -111,14 +111,14 @@ public class OpenApiReqAdapter extends AbstractOpenApiHandler {
 		long currentTime = System.currentTimeMillis();
 
 		logger.debug("begin  run doExectuteBiz,currentTImd={},httpSessionBean={}", currentTime, httpSessionBean);
-
+		// 初始化路由bean
+		//initRouteBean(request);
 		// 参数校验
 		validateParam(request);
 		// 权限校验
 		authRequestBean(request);
 
-		//initRouteBean(httpSessionBean.getRequest()); // 初始化路由bean
-		
+
 		logger.debug("end rn doExecuteBiz,currentTime={},elaspsed_time={} milseconds,httpSessionBean={}",System.currentTimeMillis(),(System.currentTimeMillis() - currentTime), httpSessionBean);
 
 		if (StringUtils.isNotBlank(request.getPrintStr())) {

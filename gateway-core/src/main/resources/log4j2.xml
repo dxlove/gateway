@@ -18,19 +18,15 @@
     <Loggers>
         <logger name="org.spring" level="error" additivity="false">
             <AppenderRef ref="Console" />
-            <AppenderRef ref="uas_appender" />
         </logger>
         <logger name="org.springframework" level="error" additivity="false">
             <AppenderRef ref="Console" />
-            <AppenderRef ref="uas_appender" />
         </logger>
         <logger name="org.apache.zookeeper" level="error" additivity="false">
             <AppenderRef ref="Console" />
-            <AppenderRef ref="uas_appender" />
         </logger>
         <logger name="com.alibaba.dubbo" level="error" additivity="false">
             <AppenderRef ref="Console" />
-            <AppenderRef ref="uas_appender" />
         </logger>
 <!--        <logger name="xx.xx.xx" level="info" additivity="false">
             <AppenderRef ref="Console" />
@@ -38,7 +34,6 @@
         </logger>-->
         <root level="info">
             <appender-ref ref="Console" />
-            <appender-ref ref="uas_appender" />
         </root>
     </Loggers>
 
